@@ -4,7 +4,7 @@ import ControlledInput from './components/ControlledInput'
 import UncontrolledInput from './components/UncontrolledInput'
 
 function App() {
-  const [val1, setVal1] = useState<string>("hi");
+  const [val1, setVal1] = useState<string | undefined>("hi");
   return (
     <>
       <ControlledInput defaultValue={val1} label='vstup' onChange={x => {setVal1(x)}} />

@@ -2,7 +2,7 @@ import {useRef, useId} from "react"
 
 type UncontrolledInputProps = {
     label: string;
-    defaultValue: string;
+    defaultValue: string | undefined;
     onChange: (value: string | undefined) => void;
 }
 
@@ -13,7 +13,7 @@ const UncontrolledInput: React.FC<UncontrolledInputProps> = ({label, defaultValu
         <div>
             <label htmlFor={id}>{label}</label>
             <input id={id} type="text" defaultValue={defaultValue} ref={inputRef} />
-            <button onClick={() => {
+            <button className="btn" onClick={() => {
                 console.log(inputRef.current);
                 onChange(inputRef.current?.value);
                 }}>Odeslat</button>

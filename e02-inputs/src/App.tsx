@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ControlledInput from './components/ControlledInput'
+import UncontrolledInput from './components/UncontrolledInput'
 
 function App() {
   const [val1, setVal1] = useState<string>("hi");
@@ -8,6 +9,7 @@ function App() {
     <>
       <ControlledInput defaultValue={val1} label='vstup' onChange={x => {setVal1(x)}} />
       <ControlledInput defaultValue={val1} label='vstup' onChange={x => {}} />
+      <UncontrolledInput defaultValue={val1} label='vstup' onChange={x => {setVal1(x)}} />
       <div>{val1}</div>
     </>
   )

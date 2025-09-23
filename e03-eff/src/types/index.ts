@@ -1,0 +1,1 @@
+export type Screen = "title" | "code" | "success"; // string union

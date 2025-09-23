@@ -15,6 +15,7 @@ function App() {
   switch(scr) {
     case "code": return <CodePage navAction={switchPage} />
     case "success": return <SuccessPage navAction={switchPage} />
+    case "title":
     default: return <TitlePage navAction={switchPage} />
   }
  }

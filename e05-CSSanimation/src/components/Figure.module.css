@@ -5,16 +5,13 @@
     border-radius: 50%;
     background-color: #c5a5cb;
     position: absolute;
-    left: 5%;
-    top: 10%;
-    transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1),
-                scale 1s ease-out 1s;
+    left: 0;
+    top: 0;
+    transition: translate 2s cubic-bezier(1, 0.15, 0.05, 0.66),
+                scale 1s ease-out 2s;
     will-change: transform;
     translate: 0px 0px;
     scale: 1;
-}
-
-.pos {
-    translate: var(--offset-x) var(--offset-y);
-    scale: 0.25;
+    translate: var(--offset-x, 0px) var(--offset-y, 0px);
+    scale: var(--scale, 1);
 }

@@ -4,10 +4,13 @@ const response = fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s
                 .then(x => x.json());
 
 const Fetcher = () => {
+    const [show, setShow] = React.useState(true);
     const data = use(response);
 
     return (
         <>
+        {show && <p>Ahoj</p>}  
+
         {data.drinks.map((drink: any) => (
             <div key={drink.idDrink}>{drink.strDrink} {drink.strAlcoholic}</div>
         ))}

@@ -66,17 +66,13 @@ const reducer = (state: StyleState, action: StyleAction): StyleState => {
             return { ...state, palette: [...palette.slice(value), ...palette.slice(0, value)] };
         }
         return state;
-    case "INCREASE_SPACING":
-        return { ...state, spacing: state.spacing + action.value };
-    case "DECREASE_SPACING":
-        return { ...state, spacing: Math.max(0, state.spacing - action.value) };
     default:
       return state;
   }
 };
 
 const initialState: StyleState = {
-    palette: ["#228B22", "#008000", "#006400", "#556B2F", "#808000", "#6B8E23", "#2E8B57"],
+    palette: palettes[0].colors,
     color: "white",
     spacing: 10,
 };

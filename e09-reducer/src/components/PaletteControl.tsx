@@ -2,7 +2,7 @@ import React from "react";
 import { useStyleContext } from "../providers/StyleProvider";
 
 const PaletteControl: React.FC = () => {
-    const [, dispatch] = useStyleContext();
+    const [{palette}, dispatch] = useStyleContext();
 
     const setRandomColor = () => {
         dispatch({ type: "SET_RANDOM_COLOR" });

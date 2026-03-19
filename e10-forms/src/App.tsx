@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { NewsletterForm, type NewsletterData } from './forms/NewsletterForm';
+import { useState } from 'react';
+import { /*NewsletterForm,*/ type NewsletterData } from './forms/NewsletterForm';
+import { NewsletterFormZod } from './forms/NewsletterFormZod';
 
 function App() {
   const [formData, setFormData] = useState<NewsletterData | null>(null);
@@ -8,7 +9,7 @@ function App() {
     <div>
       <h1>Demo: Newsletter registrace</h1>
       {formData === null ? (
-        <NewsletterForm onSubmit={setFormData} />
+        <NewsletterFormZod onSubmit={setFormData} />
       ) : (
         <div>
           <h2>Odeslaná data</h2>
